@@ -1,0 +1,151 @@
+/* Основные стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Сетка товаров */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Для планшета */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Для телефона */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Карточка товара */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Фото товара */
+.card img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* Название */
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Описание */
+.card p {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 10px;
+  height: 40px;
+  overflow: hidden;
+}
+
+/* Цена */
+.price {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Кнопка добавления */
+.card button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: #45a049;
+}
+
+/* Корзина */
+.cart {
+  margin-top: 40px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cart h2 {
+  margin-top: 0;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart li {
+  margin: 5px 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Кнопка удаления товара из корзины */
+.remove-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 3px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.remove-btn:hover {
+  background: #d32f2f;
+}
+
+/* Кнопка очистки корзины */
+.clear-btn {
+  margin-top: 15px;
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.clear-btn:hover {
+  background: #d32f2f;
+}
